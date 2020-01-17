@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Reproductor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="182" Width="385">
+        Title="MainWindow" Height="222.027" Width="388.127">
     <Grid>
         <TextBox x:Name="txtRutaArchivo" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" IsEnabled="False"/>
         <Button x:Name="btnExaminar" Content="Examinar" HorizontalAlignment="Left" Margin="292,12,0,0" VerticalAlignment="Top" Width="75" Click="BtnExaminar_Click"/>
-        <Button x:Name="btnReproducir" Content="Reproducir" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnPausa" Content="Pausa" HorizontalAlignment="Left" Margin="90,52,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnDetener" Content="Detener" HorizontalAlignment="Left" Margin="170,52,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnReproducir" Content="Reproducir" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="75" Click="BtnReproducir_Click"/>
+        <Button x:Name="btnPausa" Content="Pausa" HorizontalAlignment="Left" Margin="112,52,0,0" VerticalAlignment="Top" Width="75" Click="BtnPausa_Click"/>
+        <Button x:Name="btnDetener" Content="Detener" HorizontalAlignment="Left" Margin="212,52,0,0" VerticalAlignment="Top" Width="75" Click="BtnDetener_Click"/>
         <TextBlock x:Name="lblTiempoActual" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
         <TextBlock x:Name="lblTiempoTotal" HorizontalAlignment="Left" Margin="318,96,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
         <Slider x:Name="sldTiempo" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="357"/>
+        <ComboBox x:Name="cbDispositivoSalida" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="357"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="18"><Run Text="Elige dispositivo de salida"/><Run Text=":"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>
