@@ -14,7 +14,7 @@
         <Button x:Name="btnDetener" Content="Detener" HorizontalAlignment="Left" Margin="212,52,0,0" VerticalAlignment="Top" Width="75" Click="BtnDetener_Click"/>
         <TextBlock x:Name="lblTiempoActual" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
         <TextBlock x:Name="lblTiempoTotal" HorizontalAlignment="Left" Margin="318,96,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
-        <Slider x:Name="sldTiempo" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="357"/>
+        <Slider x:Name="sldTiempo" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="357" Thumb.DragStarted="SldTiempo_DragStarted" Thumb.DragCompleted="SldTiempo_DragCompleted"/>
         <ComboBox x:Name="cbDispositivoSalida" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="357"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="18"><Run Text="Elige dispositivo de salida"/><Run Text=":"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
 

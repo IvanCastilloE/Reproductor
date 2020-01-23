@@ -36,6 +36,7 @@ namespace Reproductor
         //Comunicacion con la tarjeta de audio expclusivo para salidas
         WaveOut output;
 
+        bool dragging = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -54,7 +55,9 @@ namespace Reproductor
         {
             //Tomo el tiempo y lo pone en la eatiqueta
             lblTiempoActual.Text = reader.CurrentTime.ToString().Substring(0, 8);
+            if (!dragging)
             sldTiempo.Value = reader.CurrentTime.TotalSeconds;
+
         }
 
         void ListarDispositivosSalida()
@@ -138,6 +141,21 @@ namespace Reproductor
                 btnReproducir.IsEnabled = true;
                 btnPausa.IsEnabled = false;
                 btnDetener.IsEnabled = true;
+            }
+        }
+
+        private void SldTiempo_DragStarted(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
+        {
+            dragging = true;
+
+        }
+
+        private void SldTiempo_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
+        {
+            dragging = false;
+            if(reader != null && output !=null && output.PlaybackState != PlaybackState.Stopped)
+            {
+                reader.CurrentTime = TimeSpan.FromSeconds(sldTiempo.Value);
             }
         }
     }
